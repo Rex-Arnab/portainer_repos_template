@@ -1044,6 +1044,19 @@
         {
           "name": "GF_SECURITY_COOKIE_SAMESITE",
           "label": "Same Site"
+        },
+        {
+          "name": "GF_SECURITY_ADMIN_USER",
+          "label": "Admin user"
+        },
+        {
+          "name": "GF_SECURITY_ADMIN_PASSWORD",
+          "label": "Admin password"
+        },
+        {
+          "name": "GF_SECURITY_X_XSS_PROTECTION",
+          "label": "Cross Site Scripting Protection",
+          "default": "false"
         }
       ]
     },
