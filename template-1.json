@@ -1038,9 +1038,12 @@
       "restart_policy": "unless-stopped",
       "env": [
         {
-          "name": "GF_SECURITY_ADMIN_PASSWORD",
-          "GF_SECURITY_ALLOW_EMBEDDING": "true",
-          "GF_SECURITY_COOKIE_SAMESITE": "none"
+          "name": "GF_SECURITY_ALLOW_EMBEDDING",
+          "label": "Allow embedding"
+        },
+        {
+          "name": "GF_SECURITY_COOKIE_SAMESITE",
+          "label": "Same Site"
         }
       ]
     },
