@@ -1039,24 +1039,46 @@
       "env": [
         {
           "name": "GF_SECURITY_ALLOW_EMBEDDING",
-          "label": "Allow embedding"
+          "label": "Allow embedding",
+          "default": "false",
+          "type": "boolean"
         },
         {
           "name": "GF_SECURITY_COOKIE_SAMESITE",
-          "label": "Same Site"
+          "label": "Same Site",
+          "default": "none",
+          "type": "enum",
+          "enum": ["none", "lax", "strict"]
         },
         {
           "name": "GF_SECURITY_ADMIN_USER",
-          "label": "Admin user"
+          "label": "Admin user",
+          "default": "admin",
+          "type": "string"
         },
         {
           "name": "GF_SECURITY_ADMIN_PASSWORD",
-          "label": "Admin password"
+          "label": "Admin password",
+          "default": "admin",
+          "type": "password"
+        },
+        {
+          "name": "GF_AUTH_DISABLE_LOGIN_FORM",
+          "label": "Disable login form",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "GF_AUTH_ANONYMOUS_ENABLED",
+          "label": "Anonymous enabled",
+          "default": "false",
+          "type": "boolean"
         },
         {
           "name": "GF_SECURITY_X_XSS_PROTECTION",
           "label": "Cross Site Scripting Protection",
-          "default": "false"
+          "default": "false",
+          "type": "boolean"
         }
       ]
     },
