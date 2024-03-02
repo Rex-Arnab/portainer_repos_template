@@ -1036,7 +1036,17 @@
         "url": "https://github.com/xneo1/portainer_templates"
       },
       "title": "Grafana",
-      "type": 3
+      "type": 3,
+      "env": [
+        {
+          "name": "GF_SECURITY_ADMIN_PASSWORD",
+          "label": "Admin password",
+          "description": "Password for the admin user",
+          "GF_SECURITY_ALLOW_EMBEDDING": true,
+          "GF_SECURITY_DISABLE_BRUTE_FORCE_LOGIN_PROTECTION": false,
+          "GF_SECURITY_COOKIE_SAMESITE": "none"
+        }
+      ]
     },
     {
       "categories": ["Adult"],
