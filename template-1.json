@@ -1035,28 +1035,7 @@
       "image": "grafana/grafana:latest",
       "title": "Grafana",
       "ports": ["3000/tcp"],
-      "restart_policy": "unless-stopped",
-      "env": [
-        {
-          "name": "GF_SECURITY_ALLOW_EMBEDDING",
-          "label": "Allow embedding",
-          "default": "false",
-          "type": "boolean"
-        },
-        {
-          "name": "GF_SECURITY_COOKIE_SAMESITE",
-          "label": "Same Site",
-          "default": "none",
-          "type": "enum",
-          "enum": ["none", "lax", "strict"]
-        },
-        {
-          "name": "GF_SECURITY_X_XSS_PROTECTION",
-          "label": "Cross Site Scripting Protection",
-          "default": "false",
-          "type": "boolean"
-        }
-      ]
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": ["Adult"],
