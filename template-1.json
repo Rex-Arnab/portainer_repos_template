@@ -1031,12 +1031,11 @@
       "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Grafana_logo.png?20170804201233",
       "name": "grafana",
       "platform": "linux",
-      "repository": {
-        "stackfile": "Template/Stack/grafana.yml",
-        "url": "https://github.com/xneo1/portainer_templates"
-      },
+      "image": "grafana/grafana:latest",
       "title": "Grafana",
+      "ports": ["3000/tcp"],
       "type": 3,
+      "restart_policy": "unless-stopped",
       "env": [
         {
           "name": "GF_SECURITY_ADMIN_PASSWORD",
