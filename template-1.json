@@ -412,6 +412,24 @@
     },
     {
       "type": 2,
+      "title": "Redis Cluster",
+      "description": "Open-source in-memory data structure store - Cluster mode",
+      "categories": ["database"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/redis-cluster/docker-stack.yaml"
+      },
+      "env": [
+        {
+          "name": "REDIS_PASSWD",
+          "label": "Redis password"
+        }
+      ]
+    },
+    {
+      "type": 2,
       "title": "Swarm monitoring",
       "description": "Monitor your cluster performances with Prometheus & Grafana",
       "note": "Requires Docker version 19.03.0+. <b>Make sure to add the <code>monitoring == true</code> one of your Swarm manager node before deploying this stack.</b>",
@@ -993,6 +1011,144 @@
           "default": "443"
         }
       ]
+    },
+    {
+      "categories": ["Adblocking"],
+      "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it\u2019ll cover ALL your home devices, and you don\u2019t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your network.",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/adguard.png",
+      "name": "adguardhome",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/adguardhome.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Adguard Home",
+      "type": 3
+    },
+    {
+      "categories": ["Analytics", "Monitoring", "Visualization"],
+      "description": "Grafana is the open source analytics & monitoring solution for every database.",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Grafana_logo.png?20170804201233",
+      "name": "grafana",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/grafana.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Grafana",
+      "type": 3
+    },
+    {
+      "categories": ["Adult"],
+      "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
+      "logo": "https://whisparr.com/logo/256.png",
+      "name": "whisparr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/whisparr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Whisparr",
+      "type": 3
+    },
+    {
+      "categories": ["Monitor", "Tools"],
+      "description": "Monitor your Raspberry Pi and Dockers using Grafana developed by oijkn. Please download grafana configs from his git https://github.com/oijkn/Docker-Raspberry-PI-Monitoring",
+      "env": [
+        {
+          "default": "15d",
+          "label": "PROMETHEUS_RETENTION",
+          "name": "PROMETHEUS_RETENTION"
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/rpi_monitor.png",
+      "name": "RaspberryPi-Docker-Monitor",
+      "platform": "linux",
+      "ports": ["3000:3000/tcp"],
+      "repository": {
+        "stackfile": "stack/raspberrypi-monitoring.yml",
+        "url": "https://github.com/pi-hosted/pi-hosted"
+      },
+      "restart_policy": "unless-stopped",
+      "title": "Raspberry Pi Docker Monitor",
+      "type": 3,
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">rpi_docker_monitor.md</a></h3><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/rpi_docker_monitor.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/rpi_docker_monitor.sh | bash</h3><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=IoD3vFuep64&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=8 target=\"_blank\">Novaspirit Tech - Raspberry Pi Docker Monitoring</a><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "Wps-office",
+      "name": "Wps-office",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/wps-office/config</p>",
+      "description": "[WPS Office](https://www.wps.com/) is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/wps-office-icon.png",
+      "image": "linuxserver/wps-office:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Europe/Amsterdam",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": ["3000:3000/tcp", "3001:3001/tcp"],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/wps-office/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "type": 1,
+      "title": "Vscodium",
+      "name": "Vscodium",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/vscodium/config</p>",
+      "description": "[VSCodium](https://vscodium.com/) is a community-driven, freely-licensed binary distribution of Microsoft\u2019s editor VS Code.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/vscodium-icon.png",
+      "image": "linuxserver/vscodium:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Europe/Amsterdam",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": ["3000:3000/tcp", "3001:3001/tcp"],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/vscodium/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
