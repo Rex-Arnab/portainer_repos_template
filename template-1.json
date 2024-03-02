@@ -1034,7 +1034,7 @@
       "image": "grafana/grafana:latest",
       "title": "Grafana",
       "ports": ["3000/tcp"],
-      "type": 3,
+      "type": 2,
       "restart_policy": "unless-stopped",
       "env": [
         {
