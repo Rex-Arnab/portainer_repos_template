@@ -1026,15 +1026,15 @@
       "type": 3
     },
     {
-      "categories": ["Analytics", "Monitoring", "Visualization"],
+      "type": 1,
+      "name": "grafana",
       "description": "Grafana is the open source analytics & monitoring solution for every database.",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Grafana_logo.png?20170804201233",
-      "name": "grafana",
+      "categories": ["Analytics", "Monitoring", "Visualization"],
       "platform": "linux",
       "image": "grafana/grafana:latest",
       "title": "Grafana",
       "ports": ["3000/tcp"],
-      "type": 2,
       "restart_policy": "unless-stopped",
       "env": [
         {
