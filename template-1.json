@@ -1038,21 +1038,15 @@
       "env": [
         {
           "name": "GF_SECURITY_ALLOW_EMBEDDING",
-          "label": "Allow embedding",
-          "default": false,
-          "type": "boolean"
+          "label": "Allow embedding"
         },
         {
           "name": "GF_SECURITY_COOKIE_SAMESITE",
-          "label": "Same Site",
-          "default": "none",
-          "type": "enum",
-          "enum": ["none", "lax", "strict"]
+          "label": "Same Site"
         },
         {
           "name": "GF_SECURITY_COOKIE_SECURE",
-          "label": "Secure cookie",
-          "default": false
+          "label": "Secure cookie"
         }
       ],
       "restart_policy": "unless-stopped"
