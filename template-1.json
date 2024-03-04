@@ -897,26 +897,6 @@
       ]
     },
     {
-      "type": 3,
-      "title": "WordPress",
-      "description": "WordPress setup with a MySQL database",
-      "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": ["CMS"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/wordpress/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "MYSQL_DATABASE_PASSWORD",
-          "label": "Database root password",
-          "description": "Password used by the MySQL root user."
-        }
-      ]
-    },
-    {
       "title": "Sematext Docker Agent",
       "type": 2,
       "categories": ["Log Management", "Monitoring"],
@@ -956,75 +936,6 @@
         }
       ]
     },
-
-    {
-      "type": 3,
-      "title": "Dokku",
-      "description": "Dokku setup as a compose file",
-      "categories": ["PaaS"],
-      "platform": "linux",
-      "logo": "",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/dokku/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "VERSION",
-          "label": "Dokku version",
-          "description": "Version of Dokku to use ('latest' if empty)",
-          "default": "latest"
-        },
-        {
-          "name": "DOKKU_HOSTNAME",
-          "label": "Dokku hostname",
-          "description": "Global hostname to be registered by Dokku"
-        },
-        {
-          "name": "VOLUME_PATH",
-          "label": "Dokku volume path",
-          "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
-          "default": "/var/lib/dokku"
-        },
-        {
-          "name": "DOKKU_HOST_ROOT",
-          "label": "Dokku host root",
-          "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
-          "default": "/var/lib/dokku/home/dokku"
-        },
-        {
-          "name": "SSH_PORT",
-          "label": "SSH port",
-          "description": "Host port to expose SSH port of Dokku (22 if empty)",
-          "default": "22"
-        },
-        {
-          "name": "HTTP_PORT",
-          "label": "HTTP port",
-          "description": "Host port to expose HTTP port of Dokku (80 if empty)",
-          "default": "80"
-        },
-        {
-          "name": "HTTPS_PORT",
-          "label": "HTTPS port",
-          "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
-          "default": "443"
-        }
-      ]
-    },
-    {
-      "categories": ["Adblocking"],
-      "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it\u2019ll cover ALL your home devices, and you don\u2019t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your network.",
-      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/adguard.png",
-      "name": "adguardhome",
-      "platform": "linux",
-      "repository": {
-        "stackfile": "Template/Stack/adguardhome.yml",
-        "url": "https://github.com/xneo1/portainer_templates"
-      },
-      "title": "Adguard Home",
-      "type": 3
-    },
     {
       "type": 1,
       "name": "grafana",
@@ -1050,29 +961,6 @@
         }
       ],
       "restart_policy": "unless-stopped"
-    },
-    {
-      "categories": ["Monitor", "Tools"],
-      "description": "Monitor your Raspberry Pi and Dockers using Grafana developed by oijkn. Please download grafana configs from his git https://github.com/oijkn/Docker-Raspberry-PI-Monitoring",
-      "env": [
-        {
-          "default": "15d",
-          "label": "PROMETHEUS_RETENTION",
-          "name": "PROMETHEUS_RETENTION"
-        }
-      ],
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/rpi_monitor.png",
-      "name": "RaspberryPi-Docker-Monitor",
-      "platform": "linux",
-      "ports": ["3000:3000/tcp"],
-      "repository": {
-        "stackfile": "stack/raspberrypi-monitoring.yml",
-        "url": "https://github.com/pi-hosted/pi-hosted"
-      },
-      "restart_policy": "unless-stopped",
-      "title": "Raspberry Pi Docker Monitor",
-      "type": 3,
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">rpi_docker_monitor.md</a></h3><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/rpi_docker_monitor.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/rpi_docker_monitor.sh | bash</h3><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=IoD3vFuep64&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=8 target=\"_blank\">Novaspirit Tech - Raspberry Pi Docker Monitoring</a><br><br>"
     },
     {
       "type": 1,
